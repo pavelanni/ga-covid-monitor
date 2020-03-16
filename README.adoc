@@ -1,0 +1,12 @@
+= COVID Monitor for Georgia
+
+The daily data is available on the Georgia's Department of Public Health site: https://dph.georgia.gov/covid-19-daily-status-report, but:
+
+. The data is published only for today's date
+
+. The data is published in a form of screenshot of a table which is hard to analyze.
+
+I decided to pull the table daily, OCR it and collect the data in text format.
+This script pulls the site's HTML, finds the _third_ picture in it, pulls it and
+sends it to the OCR service. 
+To use that OCR service an API_KEY is needed so I set it locally as an environment variable in my `crontab`.
